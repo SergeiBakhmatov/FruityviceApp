@@ -8,10 +8,22 @@
 import UIKit
 
 final class FruitCell: UICollectionViewCell {
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var familyLabel: UILabel!
-    @IBOutlet var genusLabel: UILabel!
-    @IBOutlet var orderLabel: UILabel!
+    
+    @IBOutlet var fruitNameLabel: UILabel!
+    @IBOutlet var fruitFamilyLabel: UILabel!
+    @IBOutlet var fruitGenusLabel: UILabel!
+    @IBOutlet var fruitOrderLabel: UILabel!
+    
+    private let networkManager = NetworkManager.shared
+    
+    func configure(with fruit: Fruit) {
+        
+        fruitNameLabel.text = fruit.name
+        fruitFamilyLabel.text = fruit.family
+        fruitGenusLabel.text = fruit.genus
+        fruitOrderLabel.text = fruit.order
+        
+    }
     
     
 }

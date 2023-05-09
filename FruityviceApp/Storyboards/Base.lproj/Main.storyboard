@@ -71,10 +71,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="familyLabel" destination="4pn-7M-suH" id="V3a-0p-yoS"/>
-                                    <outlet property="genusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
-                                    <outlet property="nameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
-                                    <outlet property="orderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
+                                    <outlet property="fruitFamilyLabel" destination="4pn-7M-suH" id="V3a-0p-yoS"/>
+                                    <outlet property="fruitGenusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
+                                    <outlet property="fruitNameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
+                                    <outlet property="fruitOrderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
