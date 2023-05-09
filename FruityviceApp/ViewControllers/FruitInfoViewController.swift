@@ -15,8 +15,12 @@ final class FruitInfoViewController: UIViewController {
     @IBOutlet var carbohydratesLabel: UILabel!
     @IBOutlet var proteinLabel: UILabel!
     
+    var fruit: Fruit!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "\(fruit.name) nutrition:"
 
     }
 }

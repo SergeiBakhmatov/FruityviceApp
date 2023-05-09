@@ -76,7 +76,7 @@
                                     <outlet property="fruitGenusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
                                     <outlet property="fruitNameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
                                     <outlet property="fruitOrderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
-                                    <segue destination="CAx-al-HfN" kind="show" id="atY-N5-7TT"/>
+                                    <segue destination="CAx-al-HfN" kind="show" identifier="showFruitInfo" id="atY-N5-7TT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
