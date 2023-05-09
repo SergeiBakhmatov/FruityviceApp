@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		7786A7E02A0A23AE009F38B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7DF2A0A23AE009F38B0 /* AppDelegate.swift */; };
 		7786A7E22A0A23AE009F38B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7E12A0A23AE009F38B0 /* SceneDelegate.swift */; };
-		7786A7E42A0A23AE009F38B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7E32A0A23AE009F38B0 /* ViewController.swift */; };
 		7786A7E72A0A23AE009F38B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7786A7E52A0A23AE009F38B0 /* Main.storyboard */; };
 		7786A7E92A0A23AF009F38B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7786A7E82A0A23AF009F38B0 /* Assets.xcassets */; };
 		7786A7EC2A0A23AF009F38B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7786A7EA2A0A23AF009F38B0 /* LaunchScreen.storyboard */; };
 		7786A7FB2A0A28C0009F38B0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FA2A0A28C0009F38B0 /* Fruit.swift */; };
 		7786A7FD2A0A297A009F38B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FC2A0A297A009F38B0 /* NetworkManager.swift */; };
+		7786A7FF2A0A316E009F38B0 /* FruitsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FE2A0A316E009F38B0 /* FruitsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7786A7DC2A0A23AE009F38B0 /* FruityviceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruityviceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7786A7DF2A0A23AE009F38B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7786A7E12A0A23AE009F38B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7786A7E32A0A23AE009F38B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7786A7E62A0A23AE009F38B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7786A7E82A0A23AF009F38B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7786A7EB2A0A23AF009F38B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7786A7ED2A0A23AF009F38B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7786A7FA2A0A28C0009F38B0 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		7786A7FC2A0A297A009F38B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7786A7FE2A0A316E009F38B0 /* FruitsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 		7786A7F92A0A24B2009F38B0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7786A7E32A0A23AE009F38B0 /* ViewController.swift */,
+				7786A7FE2A0A316E009F38B0 /* FruitsCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7786A7FB2A0A28C0009F38B0 /* Fruit.swift in Sources */,
-				7786A7E42A0A23AE009F38B0 /* ViewController.swift in Sources */,
+				7786A7FF2A0A316E009F38B0 /* FruitsCollectionViewController.swift in Sources */,
 				7786A7FD2A0A297A009F38B0 /* NetworkManager.swift in Sources */,
 				7786A7E02A0A23AE009F38B0 /* AppDelegate.swift in Sources */,
 				7786A7E22A0A23AE009F38B0 /* SceneDelegate.swift in Sources */,
