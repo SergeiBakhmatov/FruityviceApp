@@ -76,7 +76,6 @@
                                     <outlet property="fruitGenusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
                                     <outlet property="fruitNameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
                                     <outlet property="fruitOrderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
-                                    <segue destination="CAx-al-HfN" kind="show" identifier="showFruitInfo" id="atY-N5-7TT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -86,6 +85,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Fruityvice" id="Pig-yF-Y44"/>
+                    <connections>
+                        <segue destination="CAx-al-HfN" kind="show" identifier="showFruitInfo" id="QxZ-Sd-DSb"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2D-sh-PV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

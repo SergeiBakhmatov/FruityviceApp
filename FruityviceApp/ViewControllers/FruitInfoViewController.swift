@@ -21,6 +21,11 @@ final class FruitInfoViewController: UIViewController {
         super.viewDidLoad()
         
         title = "\(fruit.name) nutrition:"
+        caloriesLabel.text = "Calories: \(fruit.nutritions.calories)"
+        fatLabel.text = "Fat: \(fruit.nutritions.fat)"
+        sugarLabel.text = "Sugar: \(fruit.nutritions.sugar)"
+        carbohydratesLabel.text = "Carbohydrates: \(fruit.nutritions.carbohydrates)"
+        proteinLabel.text = "Protein: \(fruit.nutritions.protein)"
 
     }
 }

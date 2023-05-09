@@ -36,6 +36,13 @@ final class FruitsCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        fruit = fruits[indexPath.item]
+        performSegue(withIdentifier: "showFruitInfo", sender: self)
+    }
+
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,15 +52,9 @@ final class FruitsCollectionViewController: UICollectionViewController {
 
         }
     }
-
-    // MARK: UICollectionViewDelegate
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        fruit = fruits[indexPath.row]
-        performSegue(withIdentifier: "showFruitInfo", sender: self)
-    }
-
 }
+
     //MARK: Networking
 extension FruitsCollectionViewController {
     
