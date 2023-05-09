@@ -15,6 +15,7 @@
 		7786A7FB2A0A28C0009F38B0 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FA2A0A28C0009F38B0 /* Fruit.swift */; };
 		7786A7FD2A0A297A009F38B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FC2A0A297A009F38B0 /* NetworkManager.swift */; };
 		7786A7FF2A0A316E009F38B0 /* FruitsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A7FE2A0A316E009F38B0 /* FruitsCollectionViewController.swift */; };
+		7786A8012A0A3888009F38B0 /* FruitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7786A8002A0A3888009F38B0 /* FruitCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7786A7FA2A0A28C0009F38B0 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		7786A7FC2A0A297A009F38B0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7786A7FE2A0A316E009F38B0 /* FruitsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCollectionViewController.swift; sourceTree = "<group>"; };
+		7786A8002A0A3888009F38B0 /* FruitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		7786A7F82A0A24A8009F38B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7786A8002A0A3888009F38B0 /* FruitCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				7786A7FF2A0A316E009F38B0 /* FruitsCollectionViewController.swift in Sources */,
 				7786A7FD2A0A297A009F38B0 /* NetworkManager.swift in Sources */,
 				7786A7E02A0A23AE009F38B0 /* AppDelegate.swift in Sources */,
+				7786A8012A0A3888009F38B0 /* FruitCell.swift in Sources */,
 				7786A7E22A0A23AE009F38B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

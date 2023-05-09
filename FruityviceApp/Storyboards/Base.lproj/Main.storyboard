@@ -15,14 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="40" id="J3R-Qg-PfT">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="90" id="J3R-Qg-PfT">
                             <size key="itemSize" width="240" height="160"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FruitCell" id="3pX-Tj-lVa">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FruitCell" id="3pX-Tj-lVa" customClass="FruitCell" customModule="FruityviceApp" customModuleProvider="target">
                                 <rect key="frame" x="76.666666666666671" y="40" width="240" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -60,10 +60,22 @@
                                         </stackView>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="7YB-eJ-dDU" firstAttribute="centerY" secondItem="3pX-Tj-lVa" secondAttribute="centerY" id="VPo-3o-QOe"/>
                                     <constraint firstItem="7YB-eJ-dDU" firstAttribute="centerX" secondItem="3pX-Tj-lVa" secondAttribute="centerX" id="q96-7r-arS"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="familyLabel" destination="4pn-7M-suH" id="V3a-0p-yoS"/>
+                                    <outlet property="genusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
+                                    <outlet property="nameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
+                                    <outlet property="orderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
