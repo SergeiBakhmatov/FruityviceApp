@@ -7,20 +7,17 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
-class FruitsCollectionViewController: UICollectionViewController {
+final class FruitsCollectionViewController: UICollectionViewController {
+    
+    private let networkManager = NetworkManager.shared
+    private var fruits: [Fruit] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchFruits()
+        print(fruits.count)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -36,13 +33,11 @@ class FruitsCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        fruits.count
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return 1
     }
 
@@ -84,5 +79,24 @@ class FruitsCollectionViewController: UICollectionViewController {
     
     }
     */
-
+}
+    //MARK: Networking
+extension FruitsCollectionViewController {
+    
+    private func fetchFruits() {
+        networkManager.fetch(
+            [Fruit].self,
+            from: URL(string: "https://www.fruityvice.com/api/fruit/all")!) { [weak self] result in
+                switch result {
+                case .success(let fruits):
+                    self?.fruits = fruits
+                    DispatchQueue.main.async {
+                        self?.collectionView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+    }
+    
 }

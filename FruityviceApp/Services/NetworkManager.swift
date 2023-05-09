@@ -21,10 +21,7 @@ final class NetworkManager {
     
     func fetch<T: Decodable>(_ type: T.Type, from url: URL, completion: @escaping(Result<T, NetworkError>) -> Void) {
         
-        URLSession.shared.dataTask(
-            with: URL(string: "https://www.fruityvice.com/api/fruit/all")!
-        )
-        { data, _, error in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 completion(.failure(.noData))
                 print(error?.localizedDescription ?? "No error description")

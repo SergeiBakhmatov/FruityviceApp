@@ -19,9 +19,9 @@ final class FruitCell: UICollectionViewCell {
     func configure(with fruit: Fruit) {
         
         fruitNameLabel.text = fruit.name
-        fruitFamilyLabel.text = fruit.family
-        fruitGenusLabel.text = fruit.genus
-        fruitOrderLabel.text = fruit.order
+        fruitFamilyLabel.text = "Family: \(fruit.family)"
+        fruitGenusLabel.text = "Genus: \(fruit.genus)"
+        fruitOrderLabel.text = "Order: \(fruit.order)"
         
     }
     
