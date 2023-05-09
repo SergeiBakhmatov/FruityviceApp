@@ -20,6 +20,8 @@ final class FruitInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackground(for: view)
+        
         title = "\(fruit.name) nutrition:"
         caloriesLabel.text = "Calories: \(fruit.nutritions.calories)"
         fatLabel.text = "Fat: \(fruit.nutritions.fat)"

@@ -16,6 +16,8 @@ final class FruitsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
+        setupBackground(for: collectionView)
         fetchFruits()
         
     }
@@ -51,6 +53,14 @@ final class FruitsCollectionViewController: UICollectionViewController {
             fruitInfolVC.fruit = fruit
 
         }
+    }
+    
+    // MARK: Private Methods
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .black
     }
     
 }
