@@ -56,15 +56,71 @@
 		7786A7DE2A0A23AE009F38B0 /* FruityviceApp */ = {
 			isa = PBXGroup;
 			children = (
-				7786A7DF2A0A23AE009F38B0 /* AppDelegate.swift */,
-				7786A7E12A0A23AE009F38B0 /* SceneDelegate.swift */,
-				7786A7E32A0A23AE009F38B0 /* ViewController.swift */,
-				7786A7E52A0A23AE009F38B0 /* Main.storyboard */,
-				7786A7E82A0A23AF009F38B0 /* Assets.xcassets */,
-				7786A7EA2A0A23AF009F38B0 /* LaunchScreen.storyboard */,
-				7786A7ED2A0A23AF009F38B0 /* Info.plist */,
+				7786A7F92A0A24B2009F38B0 /* ViewControllers */,
+				7786A7F82A0A24A8009F38B0 /* Views */,
+				7786A7F72A0A249E009F38B0 /* Models */,
+				7786A7F62A0A248A009F38B0 /* Services */,
+				7786A7F52A0A247F009F38B0 /* Storyboards */,
+				7786A7F42A0A2478009F38B0 /* App */,
+				7786A7F32A0A246A009F38B0 /* Resources */,
 			);
 			path = FruityviceApp;
+			sourceTree = "<group>";
+		};
+		7786A7F32A0A246A009F38B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7786A7E82A0A23AF009F38B0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7786A7F42A0A2478009F38B0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7786A7DF2A0A23AE009F38B0 /* AppDelegate.swift */,
+				7786A7E12A0A23AE009F38B0 /* SceneDelegate.swift */,
+				7786A7ED2A0A23AF009F38B0 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7786A7F52A0A247F009F38B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7786A7EA2A0A23AF009F38B0 /* LaunchScreen.storyboard */,
+				7786A7E52A0A23AE009F38B0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7786A7F62A0A248A009F38B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7786A7F72A0A249E009F38B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7786A7F82A0A24A8009F38B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7786A7F92A0A24B2009F38B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7786A7E32A0A23AE009F38B0 /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +345,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBNC46BWQQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FruityviceApp/Info.plist;
+				INFOPLIST_FILE = FruityviceApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +358,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SergeiBakhmatov.FruityviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +376,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBNC46BWQQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FruityviceApp/Info.plist;
+				INFOPLIST_FILE = FruityviceApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +389,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SergeiBakhmatov.FruityviceApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
