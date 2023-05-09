@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,6 +76,7 @@
                                     <outlet property="fruitGenusLabel" destination="rBM-Br-XFC" id="HIp-z3-1kq"/>
                                     <outlet property="fruitNameLabel" destination="DJA-hw-OuR" id="hOn-f3-Brl"/>
                                     <outlet property="fruitOrderLabel" destination="Uqo-Zs-d5r" id="Bgj-0p-DBn"/>
+                                    <segue destination="CAx-al-HfN" kind="show" id="atY-N5-7TT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -88,6 +90,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2D-sh-PV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872.51908396946567" y="0.70422535211267612"/>
+        </scene>
+        <!--Fruit Info View Controller-->
+        <scene sceneID="tav-Fe-2sp">
+            <objects>
+                <viewController id="CAx-al-HfN" customClass="FruitInfoViewController" customModule="FruityviceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHK-sw-mvE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cKj-Og-HSi">
+                                <rect key="frame" x="16" y="171" width="361" height="165.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caloriesLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQx-N6-ViJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.66666666666667" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fatLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VG-LY-Lye">
+                                        <rect key="frame" x="0.0" y="36.333333333333343" width="61.666666666666664" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sugarLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geq-GZ-5hS">
+                                        <rect key="frame" x="0.0" y="72.666666666666657" width="84.333333333333329" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="carbohydratesLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBO-XP-7Ie">
+                                        <rect key="frame" x="0.0" y="109" width="151.33333333333334" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="proteinLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zse-dG-YbI">
+                                        <rect key="frame" x="0.0" y="145.33333333333331" width="95" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LXs-rQ-5rc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LXs-rQ-5rc" firstAttribute="trailing" secondItem="cKj-Og-HSi" secondAttribute="trailing" constant="16" id="Cf5-tx-TQE"/>
+                            <constraint firstItem="cKj-Og-HSi" firstAttribute="top" secondItem="LXs-rQ-5rc" secondAttribute="top" constant="16" id="P2q-yv-p8e"/>
+                            <constraint firstItem="cKj-Og-HSi" firstAttribute="leading" secondItem="LXs-rQ-5rc" secondAttribute="leading" constant="16" id="fgK-JE-5JK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qJ4-L0-gS2"/>
+                    <connections>
+                        <outlet property="caloriesLabel" destination="tQx-N6-ViJ" id="XL8-aT-aUp"/>
+                        <outlet property="carbohydratesLabel" destination="TBO-XP-7Ie" id="Esg-z8-0lL"/>
+                        <outlet property="fatLabel" destination="5VG-LY-Lye" id="IBr-vm-whl"/>
+                        <outlet property="proteinLabel" destination="Zse-dG-YbI" id="VWL-T7-1ZQ"/>
+                        <outlet property="sugarLabel" destination="Geq-GZ-5hS" id="AYB-9e-dzd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYo-PV-qii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wXH-Ip-kwU">
