@@ -32,19 +32,17 @@ final class FruitsCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        fruits.count
-    }
-
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        fruits.count
+       
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FruitCell", for: indexPath)
-    
-        // Configure the cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fruitCell", for: indexPath)
+        guard let cell = cell as? FruitCell else { return UICollectionViewCell() }
+        let fruit = fruits[indexPath.item]
+        
+        cell.configure(with: fruit)
     
         return cell
     }
