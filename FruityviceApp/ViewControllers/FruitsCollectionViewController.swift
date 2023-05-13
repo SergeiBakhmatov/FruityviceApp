@@ -12,11 +12,23 @@ final class FruitsCollectionViewController: UICollectionViewController {
     private let networkManager = NetworkManager.shared
     private var fruits: [Fruit] = []
     private var fruit: Fruit?
+    
+    private let searchController = UISearchController(searchResultsController: nil)
+    private var filteredFruits: [Fruit] = []
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
+        setupSearchController()
         setupBackground(for: collectionView)
         fetchFruits()
         
@@ -25,13 +37,15 @@ final class FruitsCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        fruits.count
+        isFiltering ? filteredFruits.count : fruits.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fruitCell", for: indexPath)
         guard let cell = cell as? FruitCell else { return UICollectionViewCell() }
-        let fruit = fruits[indexPath.item]
+        let fruit = isFiltering
+        ? filteredFruits[indexPath.item]
+        : fruits[indexPath.item]
         
         cell.configure(with: fruit)
     
@@ -41,7 +55,9 @@ final class FruitsCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        fruit = fruits[indexPath.item]
+        fruit = isFiltering
+        ? filteredFruits[indexPath.item]
+        : fruits[indexPath.item]
         performSegue(withIdentifier: "showFruitInfo", sender: self)
     }
 
@@ -61,6 +77,15 @@ final class FruitsCollectionViewController: UICollectionViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .black
+    }
+    
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.tintColor = .black
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
 }
@@ -84,4 +109,21 @@ extension FruitsCollectionViewController {
             }
     }
     
+}
+
+    // MARK: - UISearchResultsUpdating
+extension FruitsCollectionViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text ?? "")
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        
+        filteredFruits = fruits.filter { fruit in
+            return fruit.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        collectionView.reloadData()
+    }
 }
