@@ -29,7 +29,7 @@ final class FruitsCollectionViewController: UICollectionViewController {
         
         setupNavigationBar()
         setupSearchController()
-        setupBackground(for: collectionView)
+        setupCollectionView()
         fetchFruits()
         
     }
@@ -72,6 +72,10 @@ final class FruitsCollectionViewController: UICollectionViewController {
     }
     
     // MARK: Private Methods
+    
+    private func setupCollectionView() {
+        collectionView.backgroundView = UIImageView(image: UIImage(named: "backgroundPhoto"))
+    }
     
     private func setupNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
